@@ -1,0 +1,2 @@
+function = (maxRisk, [array], currentRisk) => {
+

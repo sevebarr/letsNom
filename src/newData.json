@@ -1,0 +1,152 @@
+{
+  "id": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+  "name": "Yelp V3 - Share",
+  "description": "",
+  "auth": null,
+  "events": null,
+  "variables": [],
+  "order": [
+    "58e89eb7-1076-4b1d-9370-d8019f900bb1",
+    "50d941a8-042b-4456-8616-0890d309488a",
+    "941792ac-6ca3-4592-a6ac-a8ba78595448",
+    "ecb9b3c7-3d44-4279-b082-8717fbcbb02d",
+    "79a0f71c-4350-428f-bdb1-790703f345c5",
+    "c34e0dfc-dcee-4a90-a6b6-b1638bebf273"
+  ],
+  "folders_order": [],
+  "folders": [],
+  "requests": [
+    {
+      "id": "50d941a8-042b-4456-8616-0890d309488a",
+      "name": "/businesses/{id}/reviews",
+      "url": "https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco/reviews",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    },
+    {
+      "id": "58e89eb7-1076-4b1d-9370-d8019f900bb1",
+      "name": "/businesses/{id}",
+      "url": "https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    },
+    {
+      "id": "79a0f71c-4350-428f-bdb1-790703f345c5",
+      "name": "/transactions/search",
+      "url": "https://api.yelp.com/v3/transactions/delivery/search?latitude=37.786882&longitude=-122.399972",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    },
+    {
+      "id": "941792ac-6ca3-4592-a6ac-a8ba78595448",
+      "name": "/businesses/search",
+      "url": "https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    },
+    {
+      "id": "c34e0dfc-dcee-4a90-a6b6-b1638bebf273",
+      "name": "/autocomplete",
+      "url": "https://api.yelp.com/v3/autocomplete?text=del&latitude=37.786942&longitude=-122.399643",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    },
+    {
+      "id": "ecb9b3c7-3d44-4279-b082-8717fbcbb02d",
+      "name": "/businesses/search/phone",
+      "url": "https://api.yelp.com/v3/businesses/search/phone?phone=+14157492060",
+      "description": "",
+      "data": null,
+      "dataMode": null,
+      "headerData": [
+        { "key": "Authorization", "value": "Bearer", "enabled": true }
+      ],
+      "method": "GET",
+      "pathVariableData": [],
+      "queryParams": null,
+      "auth": null,
+      "events": null,
+      "folder": null,
+      "currentHelper": null,
+      "helperAttributes": null,
+      "collectionId": "5393730a-66f0-4a70-b3d1-4d7f70464af3",
+      "headers": "Authorization: Bearer\n",
+      "pathVariables": {}
+    }
+  ]
+}

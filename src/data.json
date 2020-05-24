@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "name": "McDonalds",
+    "address": "143 Adresss Way",
+    "image": "0.jpg",
+    "rating": 4.3,
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 1,
+    "name": "Burger King",
+    "address": "4325 Street Rd",
+    "image": "1.jpg",
+    "rating": 1.5,
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 2,
+    "name": "Wendy's",
+    "address": "441 Read Head Rd",
+    "image": "2.jpg",
+    "rating": 2.3,
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 3,
+    "name": "Checker's",
+    "address": "997 Borders St",
+    "image": "3.jpg",
+    "rating": 3.7,
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": []
+  },
+  {
+    "id": 4,
+    "name": "In N' Out Burger",
+    "address": "168 Cali Way",
+    "image": "4.jpg",
+    "rating": 4.6,
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": []
+  }
+]
+
