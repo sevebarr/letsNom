@@ -1,10 +1,5 @@
 import React from 'react';
 
-// ### TO DO
-// - Take in filter criteria
-// - Append filter criteria
-// - Pass criteria to fetch componennt
-
 export default class SearchCriteron extends React.Component {
 	state = {
 		term: '',
