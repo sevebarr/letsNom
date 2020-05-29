@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import './App.css';
 import Header from './components/Header';
 //import FoodsView from './components/zDEPRECATED.FoodsView';
 import AwaitingFriends from './components/AwaitingFriends';
 import data from './data.json';
 import FetchRestaurantResults from './components/FetchRestaurantResults.js';
 import FilterCritera from './components/FilterCriteria';
+import './App.css';
 
 function App() {
 	const restaurant = data;
+	const [ searchTerms, setSearchTerms ] = useState('');
 	const [ currentComponent, setCurrentComponent ] = useState('SEARCH');
 	const [ currentRestaurant, setCurrentRestaurant ] = useState(0);
 	const [ likedRestaurants, setLikedRestaurants ] = useState([]);
@@ -85,7 +86,9 @@ function App() {
 		<div className="App">
 			<Header />
 			{/* get the current restaurant of the current restaurant */}
-			{currentComponent === 'SEARCH' ? <FilterCritera setCurrentComponent={setCurrentComponent} /> : null}
+			{currentComponent === 'SEARCH' ? (
+				<FilterCritera setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
+			) : null}
 			{currentComponent === 'RESTAURANTS' ? (
 				<div>
 					<FetchRestaurantResults
@@ -95,6 +98,7 @@ function App() {
 						superliked={superlikedRestaurants}
 						disliked={dislikedRestaurants}
 						setCurrentComponent={setCurrentComponent}
+						searchTerms={searchTerms}
 					/>
 					<button onClick={() => modifyLists(currentRestaurant, 'STATUS')}>
 						<h1>My Choices</h1>

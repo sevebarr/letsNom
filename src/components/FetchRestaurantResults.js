@@ -23,11 +23,19 @@ export default class FetchRestaurantResults extends React.Component {
 		var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 		const response = await fetch(
-			proxyUrl + 'https://api.yelp.com/v3/businesses/search\n?term=restaurant&limit=10&location=NYC',
+			proxyUrl +
+				'https://api.yelp.com/v3/businesses/search\n?categories=restaurants+cafes&limit=10' +
+				this.props.searchTerms,
 			requestOptions
 		);
 		const theData = await response.json();
 		this.setState({ restaurants: theData.businesses, loading: false });
+
+		console.log(
+			proxyUrl +
+				'https://api.yelp.com/v3/businesses/search\n?categories=restaurants+cafes&limit=10' +
+				this.props.searchTerms
+		);
 	}
 
 	render() {
@@ -46,7 +54,9 @@ export default class FetchRestaurantResults extends React.Component {
 							{this.state.restaurants[this.props.currentRestaurant].name} - {' '}
 							{this.state.restaurants[this.props.currentRestaurant].rating} -
 						</h2>
-						<h3>Location: {this.state.restaurants[this.props.currentRestaurant].location.address1}</h3>
+						<h3>
+							Location: {this.state.restaurants[this.props.currentRestaurant].location.display_address}
+						</h3>
 						<Actions restaurant={this.state.restaurants} modifyLists={this.props.modifyLists} />
 					</div>
 				) : (
