@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const Superlike = ({ restaurantId, modifyLists }) => (
-  <button
-    type="button"
-    onClick={() => modifyLists(restaurantId, "SUPERLIKE_RESTAURANT")}
-  >
-    <img src="images/misc/superlike.png" alt="superlike" />
-  </button>
+const Superlike = (props) => (
+	<button type="button" onClick={() => props.modifyLists(props.restaurant, 'SUPERLIKE_RESTAURANT')}>
+		<img src="images/misc/superlike.png" alt="superlike" />
+	</button>
 );
 
 export default Superlike;

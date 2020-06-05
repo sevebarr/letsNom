@@ -4,13 +4,13 @@ import Superlike from './actionButtons/Superlike';
 import Rewind from './actionButtons/Rewind';
 import Dislike from './actionButtons/Dislike';
 
-const Actions = ({ restaurant, modifyLists }) => {
+const Actions = (props) => {
 	return (
 		<div className="actions">
-			<Like restaurantId={restaurant.id} modifyLists={modifyLists} />
-			<Superlike restaurantId={restaurant.id} modifyLists={modifyLists} />
-			<Rewind restaurantId={restaurant.id} modifyLists={modifyLists} />
-			<Dislike restaurantId={restaurant.id} modifyLists={modifyLists} />
+			<Like restaurant={props.restaurant} modifyLists={props.modifyLists} />
+			<Superlike restaurant={props.restaurant} modifyLists={props.modifyLists} />
+			<Rewind restaurant={props.restaurant} modifyLists={props.modifyLists} />
+			<Dislike restaurant={props.restaurant} modifyLists={props.modifyLists} />
 		</div>
 	);
 };

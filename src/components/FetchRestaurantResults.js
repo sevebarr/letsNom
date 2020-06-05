@@ -46,7 +46,7 @@ export default class FetchRestaurantResults extends React.Component {
 				) : this.state.restaurants[this.props.currentRestaurant] ? (
 					<div className="RestaurantView">
 						<img
-							className="restaurant-img img-fluid"
+							className="restaurant-img img-fluid w-100"
 							src={this.state.restaurants[this.props.currentRestaurant].image_url}
 							alt={this.state.restaurants[this.props.currentRestaurant].name}
 						/>
@@ -64,7 +64,7 @@ export default class FetchRestaurantResults extends React.Component {
 							}, {this.state.restaurants[this.props.currentRestaurant].location.display_address[1]}
 						</div>
 						<Actions
-							restaurant={this.state.restaurants[this.props.currentRestaurant].id}
+							restaurant={this.state.restaurants[this.props.currentRestaurant]}
 							modifyLists={this.props.modifyLists}
 						/>
 					</div>
