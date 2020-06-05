@@ -46,18 +46,27 @@ export default class FetchRestaurantResults extends React.Component {
 				) : this.state.restaurants[this.props.currentRestaurant] ? (
 					<div className="RestaurantView">
 						<img
+							className="restaurant-img img-fluid"
 							src={this.state.restaurants[this.props.currentRestaurant].image_url}
 							alt={this.state.restaurants[this.props.currentRestaurant].name}
 						/>
 
-						<h2>
-							{this.state.restaurants[this.props.currentRestaurant].name} - {' '}
-							{this.state.restaurants[this.props.currentRestaurant].rating} -
-						</h2>
-						<h3>
-							Location: {this.state.restaurants[this.props.currentRestaurant].location.display_address}
-						</h3>
-						<Actions restaurant={this.state.restaurants} modifyLists={this.props.modifyLists} />
+						<a className="display-4" href={this.state.restaurants[this.props.currentRestaurant].url}>
+							{this.state.restaurants[this.props.currentRestaurant].name}
+						</a>
+						<div>
+							Rating: <strong>{this.state.restaurants[this.props.currentRestaurant].rating}</strong> ({this.state.restaurants[this.props.currentRestaurant].review_count}{' '}
+							reviews)
+						</div>
+						<div>
+							Location: {
+								this.state.restaurants[this.props.currentRestaurant].location.display_address[0]
+							}, {this.state.restaurants[this.props.currentRestaurant].location.display_address[1]}
+						</div>
+						<Actions
+							restaurant={this.state.restaurants[this.props.currentRestaurant].id}
+							modifyLists={this.props.modifyLists}
+						/>
 					</div>
 				) : (
 					this.props.setCurrentComponent('WAIT')

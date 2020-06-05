@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+
 //import FoodsView from './components/zDEPRECATED.FoodsView';
 import AwaitingFriends from './components/AwaitingFriends';
-import data from './data.json';
+////import data from './data.json';
 import FetchRestaurantResults from './components/FetchRestaurantResults.js';
 import FilterCritera from './components/FilterCriteria';
 import './App.css';
 
 function App() {
-	const restaurant = data;
+	//const restaurant = data;
 	const [ searchTerms, setSearchTerms ] = useState('');
 	const [ currentComponent, setCurrentComponent ] = useState('SEARCH');
 	const [ currentRestaurant, setCurrentRestaurant ] = useState(0);
@@ -37,21 +38,21 @@ function App() {
 	const modifyLists = (restaurantId, action) => {
 		switch (action) {
 			case 'LIKE_RESTAURANT':
-				newLikedRestaurants.push(data[restaurantId]);
+				//newLikedRestaurants.push(data[restaurantId]);
 				setCurrentRestaurant(currentRestaurant + 1);
 				setLikedRestaurants(newLikedRestaurants);
 				setLastRestaurant(restaurantId);
 				break;
 
 			case 'DISLIKE_RESTAURANT':
-				newDislikedRestaurants.push(data[restaurantId]);
+				//newDislikedRestaurants.push(data[restaurantId]);
 				setCurrentRestaurant(currentRestaurant + 1);
 				setDislikedRestaurants(newDislikedRestaurants);
 				setLastRestaurant(restaurantId);
 				break;
 
 			case 'SUPERLIKE_RESTAURANT':
-				newSuperlikedRestaurants.push(data[restaurantId]);
+				//newSuperlikedRestaurants.push(data[restaurantId]);
 				setCurrentRestaurant(currentRestaurant + 1);
 				setSuperlikedRestaurants(newSuperlikedRestaurants);
 				setLastRestaurant(restaurantId);
@@ -78,13 +79,14 @@ function App() {
 				break;
 
 			default:
-				return restaurant;
+				return null;
 		}
 	};
 
 	return (
 		<div className="App">
 			<Header />
+			<div className="mt-5" />
 			{/* get the current restaurant of the current restaurant */}
 			{currentComponent === 'SEARCH' ? (
 				<FilterCritera setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
@@ -104,9 +106,7 @@ function App() {
 						<h1>My Choices</h1>
 					</button>
 				</div>
-			) : (
-				console.log('no restaurants')
-			)}
+			) : null}
 			{currentComponent === 'WAIT' ? (
 				<div>
 					<AwaitingFriends
@@ -115,9 +115,7 @@ function App() {
 						disliked={dislikedRestaurants}
 					/>
 				</div>
-			) : (
-				console.log('no friends')
-			)}
+			) : null}
 		</div>
 	);
 }

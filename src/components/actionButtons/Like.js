@@ -1,13 +1,10 @@
-import React from "react";
+import React from 'react';
 
 // passing down methods
-const Like = ({ restaurantId, modifyLists }) => (
-  <button
-    type="button"
-    onClick={() => modifyLists(restaurantId, "LIKE_RESTAURANT")}
-  >
-    <img src="images/misc/like.png" alt="Like" />
-  </button>
+const Like = ({ restaurant, modifyLists }) => (
+	<button className="btn" type="button" onClick={() => modifyLists(restaurant, 'LIKE_RESTAURANT')}>
+		<img src="images/misc/like.png" alt="Like" />
+	</button>
 );
 
 // const Like = ({ userId, modifyLikes }) => (

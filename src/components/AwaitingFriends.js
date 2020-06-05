@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// TODO - Create flexbox UI to show choices
 const AwaitingFriends = ({ liked, disliked, superliked }) => {
   return (
     <div>

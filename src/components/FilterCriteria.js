@@ -53,58 +53,87 @@ export default class SearchCriteron extends React.Component {
 
 	render() {
 		return (
-			<div className="search-container container">
-				<div className="search-header">
+			<div className="search-container container rounded">
+				<div className="search-header rounded">
 					<h2 className="title">Filter Criteria</h2>
 					<p className="random-paragraph">You want to eat? Let's pick a place to eat.</p>
 				</div>
-				<div className="search-sub search_term ">
-					<label htmlFor="term">Search: </label>
-					<input value={this.state.term} onChange={this.handleTerm} type="text" id="term" name="term" />
-				</div>
 
-				<div className="search-sub location">
-					<label htmlFor="term">Location: </label>
-					<input
-						value={this.state.location}
-						onChange={this.handleLocation}
-						type="text"
-						id="location"
-						name="location"
-					/>
-				</div>
+				<form>
+					<div className="form-group">
+						<div className="search-sub search_term ">
+							<label htmlFor="term">Search: </label>
+							<input
+								className="form-control"
+								value={this.state.term}
+								onChange={this.handleTerm}
+								type="text"
+								id="term"
+								name="term"
+								placeholder="Burgers, Pizza, Sushi etc..."
+							/>
+						</div>
 
-				<div className="search-sub price ">
-					<label htmlFor="price">Price: </label>
-					<select value={this.state.price} onChange={this.handlePrice}>
-						<option value="1">$</option>
-						<option value="2">$$</option>
-						<option value="3">$$$</option>
-						<option value="4">$$$$</option>
-					</select>
-				</div>
+						<div className="search-sub location">
+							<label htmlFor="term">Location: </label>
+							<input
+								className="form-control"
+								value={this.state.location}
+								onChange={this.handleLocation}
+								type="text"
+								id="location"
+								name="location"
+								placeholder="Brooklyn, Mission District, etc..."
+							/>
+						</div>
 
-				<div className="search-sub open_now ">
-					<label htmlFor="open_now">Open Now: </label>
-					<input
-						type="checkbox"
-						checked={this.state.open}
-						onChange={this.handleOpen}
-						id="open_now"
-						name="open_now"
-					/>
-				</div>
+						<div className="search-sub ">
+							<label for="inputPrice">Price:</label>
 
-				<div className="search-sub submit">
-					<button className="btn btn-primary btn-lg btn-block" type="button" onClick={this.handleSubmit}>
-						Submit
-					</button>
-				</div>
-				<div className="search-sub TEST_BUTTON">
-					<button className="btn btn-primary btn-lg btn-block" type="button" onClick={this.handleTest}>
-						Test
-					</button>
-				</div>
+							<select
+								className="form-control"
+								id="inputPrice"
+								value={this.state.price}
+								onChange={this.handlePrice}
+							>
+								<option value="1">$</option>
+								<option value="2">$$</option>
+								<option value="3">$$$</option>
+								<option value="4">$$$$</option>
+							</select>
+						</div>
+
+						<div className="search-sub open_now ">
+							<input
+								type="checkbox"
+								className="form-check-input"
+								checked={this.state.open}
+								onChange={this.handleOpen}
+								id="open_now"
+								name="open_now"
+							/>
+							<label htmlFor="open_now">Open Now</label>
+						</div>
+
+						<div className="search-sub submit">
+							<button
+								className="btn btn-primary btn-lg btn-block"
+								type="button"
+								onClick={this.handleSubmit}
+							>
+								Submit
+							</button>
+
+							<button
+								className="btn btn-block btn-lg btn-warning"
+								type="button"
+								onClick={this.handleTest}
+							>
+								Test
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		);
 	}

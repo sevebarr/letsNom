@@ -15,34 +15,45 @@ LIGHTCYAN
 #E0FFFF
 rgb(224,255,255) */
 
-html {
-	text-align: center;
-	background-color: #e0ffff;
-}
 .App {
 	text-align: center;
-	background-color: #e0ffff;
 }
 
-header {
-	background-color: #95c5c5;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px 5px;
-	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-	max-height: 3em;
-	justify-content: space-between;
+/* SEARCH */
+
+.search-container {
+	margin: 5px;
+	background-color: rgba(0, 0, 0, .2);
+
+	position: absolute;
+	left: 0em;
+	right: 0em;
+	margin: 0em auto 2em;
+	padding: 20px;
 }
-header img {
-	max-height: 2.5em;
+
+.search-header {
+	background-color: white;
+	margin: 1em;
+	padding: 1em auto 1em;
+}
+
+.search-sub {
+	padding: 0px;
+	box-shadow: black;
+}
+label {
+	padding-right: 5px;
 }
 
 /* FOOD */
-.RestaurantView img {
-	height: 400px;
-	max-width: auto;
+
+.restaurant-img {
+	object-fit: none; /* Do not scale the image */
+	object-position: center; /* Center the image within the element */
+	display: flex;
+	max-height: 400px;
+	margin: 1rem auto;
 }
 
 /* ACTIONS */
@@ -62,43 +73,17 @@ header img {
 	padding: 12px;
 	border: 0;
 	border-radius: 50px;
-	background-color: #e0ffff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	float: left;
 	cursor: cell;
-	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .actions button img {
 	width: 100%;
 	height: auto;
-}
-
-/* SEARCH */
-
-.search-container {
-	margin: 5px;
-	background-color: #95c5c5;
-
-	position: absolute;
-
-	left: 0;
-	right: 0;
-	max-width: 30em;
-	margin: 1em auto 2em;
-}
-
-.search-header {
-	background-color: aliceblue;
-	margin: 1em auto;
-	padding: 1em;
-}
-
-.search-sub {
-	padding: 1em;
-	box-shadow: black;
 }
 
 /* 
