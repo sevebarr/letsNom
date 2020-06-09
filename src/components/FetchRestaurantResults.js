@@ -31,6 +31,8 @@ export default class FetchRestaurantResults extends React.Component {
 		const theData = await response.json();
 		this.setState({ restaurants: theData.businesses, loading: false });
 
+		this.props.setRestaurantList(theData.businesses);
+
 		console.log(
 			proxyUrl +
 				'https://api.yelp.com/v3/businesses/search\n?categories=restaurants+cafes&limit=10' +
