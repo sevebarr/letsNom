@@ -6,7 +6,7 @@ import Dislike from './actionButtons/Dislike';
 
 const Actions = (props) => {
 	return (
-		<div className="actions">
+		<div className="actions fixed-bottom mb-5">
 			<Like restaurant={props.restaurant} modifyLists={props.modifyLists} />
 			<Superlike restaurant={props.restaurant} modifyLists={props.modifyLists} />
 			<Rewind restaurant={props.restaurant} modifyLists={props.modifyLists} />

@@ -56,7 +56,7 @@ export default class SearchCriteron extends React.Component {
 			<div className="search-container container rounded">
 				<div className="search-header rounded">
 					<h2 className="title">Filter Criteria</h2>
-					<p className="random-paragraph">You want to eat? Let's pick a place to eat.</p>
+					<p className="random-paragraph">You want to eat? Let's pick a place to eat!</p>
 				</div>
 
 				<form>
@@ -123,14 +123,14 @@ export default class SearchCriteron extends React.Component {
 							>
 								Submit
 							</button>
-
+							{/* 
 							<button
 								className="btn btn-block btn-lg btn-warning"
 								type="button"
 								onClick={this.handleTest}
 							>
 								Test
-							</button>
+							</button> */}
 						</div>
 					</div>
 				</form>

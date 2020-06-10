@@ -44,7 +44,11 @@ export default class FetchRestaurantResults extends React.Component {
 		return (
 			<div>
 				{this.state.loading || !this.state.restaurants ? (
-					<div>loading...</div>
+					<div className="container-fluid">
+						<div className="jumbotron vertical-center align-items-center">
+							<div className="container">Finding some places that match your criteria... 😋</div>
+						</div>
+					</div>
 				) : this.state.restaurants[this.props.currentRestaurant] ? (
 					<div className="RestaurantView">
 						<img

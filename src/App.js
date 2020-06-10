@@ -58,14 +58,14 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div className="App mt-5">
 			<Header />
 			<div className="mt-5" />
 			{currentComponent === 'SEARCH' ? (
 				<FilterCritera setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
 			) : null}
 			{currentComponent === 'RESTAURANTS' ? (
-				<div>
+				<div className="container">
 					<FetchRestaurantResults
 						currentRestaurant={currentRestaurant}
 						modifyLists={modifyLists}
@@ -73,9 +73,9 @@ function App() {
 						setCurrentComponent={setCurrentComponent}
 						searchTerms={searchTerms}
 					/>
-					<button onClick={() => modifyLists(currentRestaurant, 'STATUS')}>
+					{/* <button onClick={() => modifyLists(currentRestaurant, 'STATUS')}>
 						<h1>My Choices</h1>
-					</button>
+					</button> */}
 				</div>
 			) : null}
 			{currentComponent === 'WAIT' ? (
