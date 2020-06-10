@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SearchCriteron extends React.Component {
+export default class SearchCriteria extends React.Component {
 	state = {
 		term: '',
 		location: '',

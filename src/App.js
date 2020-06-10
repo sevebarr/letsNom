@@ -10,7 +10,7 @@ import Routes from './Routes';
 import Header from './components/Header';
 import AwaitingFriends from './components/AwaitingFriends';
 import FetchRestaurantResults from './components/FetchRestaurantResults.js';
-import FilterCritera from './components/FilterCriteria';
+import SearchCriteria from './components/SearchCriteria';
 import './App.css';
 
 function App() {
@@ -73,7 +73,7 @@ function App() {
 
 			{/* SEARCH CRITERIA */}
 			{currentComponent === 'SEARCH' ? (
-				<FilterCritera setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
+				<SearchCriteria setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
 			) : null}
 
 			{/* BROWSE RESULTS */}
