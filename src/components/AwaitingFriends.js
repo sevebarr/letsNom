@@ -5,11 +5,10 @@ import RestaurantRowDisplay from '../components/RestaurantRowDisplay';
 const AwaitingFriends = ({ liked, disliked, superliked }) => {
 	return (
 		<div className="">
-			<h1>Let's wait and see what your friends picked</h1>
-			<h2>Your choices:</h2>
+			<div className="h2">Your choices:</div>
 			{superliked[0] ? (
-				<div className="superliked">
-					<div className="display-4">You superliked these</div>
+				<div className="superliked jumbotron">
+					<div className="h4">SUPERLIKED</div>
 					{superliked.map((item) => <RestaurantRowDisplay res={item} />)}
 				</div>
 			) : (
@@ -17,8 +16,8 @@ const AwaitingFriends = ({ liked, disliked, superliked }) => {
 			)}
 
 			{liked[0] ? (
-				<div className="liked">
-					<div className="display-4">You liked these</div>
+				<div className="liked jumbotron">
+					<div className="h4">LIKED</div>
 					{liked.map((item) => <RestaurantRowDisplay res={item} />)}
 				</div>
 			) : (
@@ -26,8 +25,8 @@ const AwaitingFriends = ({ liked, disliked, superliked }) => {
 			)}
 
 			{disliked[0] ? (
-				<div className="disliked">
-					<div className="display-4">You disliked these</div>
+				<div className="disliked jumbotron">
+					<div className="h4">DISLIKED</div>
 					{disliked.map((item) => <RestaurantRowDisplay res={item} />)}
 				</div>
 			) : (
