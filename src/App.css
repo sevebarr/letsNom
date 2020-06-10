@@ -23,8 +23,7 @@ rgb(224,255,255) */
 
 .search-container {
 	margin: 5px;
-	background-color: rgba(0, 0, 0, .2);
-
+	/* background-color: rgba(0, 0, 0, .2); */
 	position: absolute;
 	left: 0em;
 	right: 0em;
@@ -39,7 +38,7 @@ rgb(224,255,255) */
 }
 
 .search-sub {
-	padding: 0px;
+	padding: .5em;
 	box-shadow: black;
 }
 label {

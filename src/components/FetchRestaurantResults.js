@@ -42,7 +42,7 @@ export default class FetchRestaurantResults extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='v'>
 				{this.state.loading || !this.state.restaurants ? (
 					<div className="container-fluid">
 						<div className="jumbotron vertical-center align-items-center">
@@ -50,7 +50,7 @@ export default class FetchRestaurantResults extends React.Component {
 						</div>
 					</div>
 				) : this.state.restaurants[this.props.currentRestaurant] ? (
-					<div className="RestaurantView">
+					<div className="RestaurantView mb-5">
 						<img
 							className="restaurant-img img-fluid w-100"
 							src={this.state.restaurants[this.props.currentRestaurant].image_url}

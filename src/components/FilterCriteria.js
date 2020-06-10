@@ -55,14 +55,14 @@ export default class SearchCriteron extends React.Component {
 		return (
 			<div className="search-container container rounded">
 				<div className="search-header rounded">
-					<h2 className="title">Filter Criteria</h2>
-					<p className="random-paragraph">You want to eat? Let's pick a place to eat!</p>
+					<div className="display-3">Search</div>
+					<em>You want to eat? Let's pick a place to eat!</em>
 				</div>
 
 				<form>
 					<div className="form-group">
 						<div className="search-sub search_term ">
-							<label htmlFor="term">Search: </label>
+							<label htmlFor="term">Keywords: </label>
 							<input
 								className="form-control"
 								value={this.state.term}

@@ -4,16 +4,16 @@ const RestaurantRowDisplay = (res) => {
 	return (
 		<div className="container">
 			{console.log(res)}
-			<div className="row border border-primary rounded">
-				<div className="col-3">{res.res.name}</div>
-				<div className="col-2">
+			<div className="row border border-dark align-self-center rounded">
+				<a href={res.res.url} className="col-3 align-self-center ">{res.res.name}</a>
+				<div className="col-2 align-self-center">
 					<img className="img-thumbnail" src={res.res.image_url} />
 				</div>
-				<div className="col-2">
-					{res.res.rating} ({res.res.review_count})
+				<div className="col-2 align-self-center">
+					{res.res.rating} stars ({res.res.review_count})
 				</div>
-				<div className="col-2">{res.res.price}</div>
-				<div className="col-3">
+				<div className="col-1 align-self-center">{res.res.price}</div>
+				<div className="col-4 align-self-center">
 					<div>{res.res.location.display_address[0]}</div>
 					<div>{res.res.location.display_address[1]}</div>
 				</div>

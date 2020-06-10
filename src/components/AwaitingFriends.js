@@ -4,8 +4,8 @@ import RestaurantRowDisplay from '../components/RestaurantRowDisplay';
 // TODO - Create flexbox UI to show choices
 const AwaitingFriends = ({ liked, disliked, superliked }) => {
 	return (
-		<div className="">
-			<div className="h2">Your choices:</div>
+		<div className="align-middle">
+			<div className="h2 align-self-center">Your choices:</div>
 			{superliked[0] ? (
 				<div className="superliked jumbotron">
 					<div className="h4">SUPERLIKED</div>

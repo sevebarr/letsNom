@@ -1,0 +1,6 @@
+TO DO
+- fix fetch to pull API data without proxy
+- create a database for users
+- attach choices to users
+- add a continue page if there are no matches
+  > add attribute that marks if a result has been viewed

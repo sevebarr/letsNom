@@ -1,54 +1,41 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap'; // Components provided by Bootstrap
+
+import { Link } from 'react-router-dom';
+
 // import Routes from './Routes';
 // import { Link, withRouter } from 'react-router-dom';
 // import { LinkContainer } from 'react-router-bootstrap'; // Allows App to route to the required link without refreshing the browser
 
 //import { Navbar, Nav, NavItem, NavDrowpdown, MenuItem } from 'react-bootstrap';
 
-// import Logo from './Logo';
 
 class Header extends Component {
 	render() {
 		return (
-			<Navbar collapseOnSelect>
-				<nav className="navbar bg-light navbar-light nav nav-pills navbar-expand-sm fixed-top">
-					<div className="navbar-brand">Lets Nom</div>
-					{/* d-none d-sm-inline to make navbar brand disappear on small */}
 
-					<button
-						className="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#myNavToggle"
-						aria-controls="myNavToggle"
-						aria-expanded="false"
-						aria-label="Toggle Navigation"
-					>
-						<span className="navbar-toggler-icon" />
-					</button>
+
+			<Navbar bg="dark" variant="dark" className="collapseOnSelect">
+					<Navbar.Brand href='/'>Lets Nom</Navbar.Brand>
+					{/* d-none d-sm-inline to make navbar brand disappear on small */}
 
 					<div className="collapse navbar-collapse" id="myNavToggle">
 						<div className="navbar-nav ml-auto">
-							<a className="nav-item nav-link" href="https://facebook.com">
+						<Nav.Link href="/">
 								Home
-							</a>
-							<a className="nav-item nav-link" href="https://facebook.com">
+							</Nav.Link>
+							<Nav.Link href="/">
 								Messages
-							</a>
-							<a className="nav-item nav-link" href="https://facebook.com">
+							</Nav.Link>
+							<Nav.Link href="/">
 								Settings
-							</a>
-							<a className="nav-item nav-link" href="https://facebook.com">
+							</Nav.Link>
+							<Nav.Link href="/">
 								Log Out
-							</a>
+							</Nav.Link>
+
 						</div>
-						{/* Navbar Nav */}
 					</div>
-					{/* Navbar Collapse */}
-					{/* Container */}
-				</nav>
-				{/* Navbar Main */}
 			</Navbar>
 		);
 	}

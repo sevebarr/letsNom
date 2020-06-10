@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
+
+import { Navbar, Nav, NavItem } from 'react-bootstrap'; // Components provided by Bootstrap
+import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
+
+import Routes from './Routes';
+
 //import FoodsView from './components/zDEPRECATED.FoodsView';
+import Header from './components/Header';
 import AwaitingFriends from './components/AwaitingFriends';
 import FetchRestaurantResults from './components/FetchRestaurantResults.js';
 import FilterCritera from './components/FilterCriteria';
@@ -17,7 +24,6 @@ function App() {
 	const [ lastRestaurant, setLastRestaurant ] = useState([]);
 
 	const removeFromList = (list, restaurant) => list.filter((res) => res !== restaurant);
-	//takes in list and restId
 	//filter from list - keep rest.id !== restaurantId
 
 	const modifyLists = (restaurant, action) => {
@@ -58,12 +64,19 @@ function App() {
 	};
 
 	return (
-		<div className="App mt-5">
+
+
+		<div className="App ">
+
 			<Header />
 			<div className="mt-5" />
+
+			{/* SEARCH CRITERIA */}
 			{currentComponent === 'SEARCH' ? (
 				<FilterCritera setCurrentComponent={setCurrentComponent} setSearchTerms={setSearchTerms} />
 			) : null}
+
+			{/* BROWSE RESULTS */}
 			{currentComponent === 'RESTAURANTS' ? (
 				<div className="container">
 					<FetchRestaurantResults
@@ -73,11 +86,14 @@ function App() {
 						setCurrentComponent={setCurrentComponent}
 						searchTerms={searchTerms}
 					/>
+					{/* TEST BUTTON */}
 					{/* <button onClick={() => modifyLists(currentRestaurant, 'STATUS')}>
 						<h1>My Choices</h1>
 					</button> */}
 				</div>
 			) : null}
+
+			{/* FINISHED SEARCH */}
 			{currentComponent === 'WAIT' ? (
 				<div>
 					<AwaitingFriends
