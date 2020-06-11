@@ -19,6 +19,32 @@ rgb(224,255,255) */
 	text-align: center;
 }
 
+
+/* LOGIN */
+@media all and (min-width: 480px) {
+  .Home {
+    padding: 60px 0;
+  }
+
+  .Home form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+/* LOGIN */
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+
 /* SEARCH */
 
 .search-container {

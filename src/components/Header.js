@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem } from 'react-bootstrap'; // Components provided by Bootstrap
-
 import { Link } from 'react-router-dom';
 
 // import Routes from './Routes';
-// import { Link, withRouter } from 'react-router-dom';
 // import { LinkContainer } from 'react-router-bootstrap'; // Allows App to route to the required link without refreshing the browser
 
-//import { Navbar, Nav, NavItem, NavDrowpdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDrowpdown, MenuItem } from 'react-bootstrap';
 
 
 class Header extends Component {
+
+	handleLogout = () => {
+		//this.props.setCurrentComponent('LOGIN');
+		// this.props.setUserAuthenticated(false);
+
+	}
+
 	render() {
 		return (
 
@@ -21,18 +25,11 @@ class Header extends Component {
 
 					<div className="collapse navbar-collapse" id="myNavToggle">
 						<div className="navbar-nav ml-auto">
-						<Nav.Link href="/">
-								Home
-							</Nav.Link>
-							<Nav.Link href="/">
-								Messages
-							</Nav.Link>
-							<Nav.Link href="/">
-								Settings
-							</Nav.Link>
-							<Nav.Link href="/">
-								Log Out
-							</Nav.Link>
+
+]							<Nav.Link href="/">Home</Nav.Link>
+							<Nav.Link href="/search">Search</Nav.Link>
+							<Nav.Link href="/login">Login</Nav.Link>
+							<Nav.Link onClick={this.handleLogout} href="/">Log Out</Nav.Link>
 
 						</div>
 					</div>

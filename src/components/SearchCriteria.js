@@ -59,8 +59,8 @@ export default class SearchCriteria extends React.Component {
 					<em>You want to eat? Let's pick a place to eat!</em>
 				</div>
 
-				<form>
-					<div className="form-group">
+				<form className="container">
+					<div className="form-group container">
 						<div className="search-sub search_term ">
 							<label htmlFor="term">Keywords: </label>
 							<input
@@ -73,8 +73,8 @@ export default class SearchCriteria extends React.Component {
 								placeholder="Burgers, Pizza, Sushi etc..."
 							/>
 						</div>
-
-						<div className="search-sub location">
+						<div className="row">
+						<div className="search-sub col-6 location">
 							<label htmlFor="term">Location: </label>
 							<input
 								className="form-control"
@@ -87,23 +87,23 @@ export default class SearchCriteria extends React.Component {
 							/>
 						</div>
 
-						<div className="search-sub ">
-							<label for="inputPrice">Price:</label>
+							<div className="search-sub col-6 align-self-center">
+								<label for="inputPrice">Price:</label>
 
-							<select
-								className="form-control"
-								id="inputPrice"
-								value={this.state.price}
-								onChange={this.handlePrice}
-							>
-								<option value="1">$</option>
-								<option value="2">$$</option>
-								<option value="3">$$$</option>
-								<option value="4">$$$$</option>
-							</select>
-						</div>
-
-						<div className="search-sub open_now ">
+								<select
+									className="form-control"
+									id="inputPrice"
+									value={this.state.price}
+									onChange={this.handlePrice}
+								>
+									<option value="1">$</option>
+									<option value="2">$$</option>
+									<option value="3">$$$</option>
+									<option value="4">$$$$</option>
+								</select>
+							</div>
+							</div>
+						<div className="search-sub open_now align-self-center">
 							<input
 								type="checkbox"
 								className="form-check-input"
@@ -112,8 +112,9 @@ export default class SearchCriteria extends React.Component {
 								id="open_now"
 								name="open_now"
 							/>
-							<label htmlFor="open_now">Open Now</label>
-						</div>
+							<label htmlFor="open_now ">Open Now</label>
+							</div>
+
 
 						<div className="search-sub submit">
 							<button
