@@ -28,6 +28,9 @@ export default class FetchRestaurantResults extends React.Component {
 				this.props.searchTerms,
 			requestOptions
 		);
+		//.then(() => console.log('restaurants recieved'))
+		//.catch(() => console.log("Couldn't retrieve restaurants"));
+
 		const theData = await response.json();
 		this.setState({ restaurants: theData.businesses, loading: false });
 
@@ -42,11 +45,12 @@ export default class FetchRestaurantResults extends React.Component {
 
 	render() {
 		return (
-			<div className='v'>
+			<div className="v">
 				{this.state.loading || !this.state.restaurants ? (
 					<div className="container-fluid">
 						<div className="jumbotron vertical-center align-items-center">
-							<div className="container">Finding some places that match your criteria... 😋</div>
+							<div className="container">Finding some places that match your criteria... </div>
+							<img src="images/misc/yummy.png" className="mt-5 img-fluid spinning fit-image" />
 						</div>
 					</div>
 				) : this.state.restaurants[this.props.currentRestaurant] ? (
