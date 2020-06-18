@@ -51,9 +51,9 @@ function App(props) {
 			<div className="App">
 				<Router>
 					<Header userAuthenticated={userAuthenticated} handleLogout={handleLogout} />
-					<button className="btn btn-lg" onClick={() => amILogged()}>
+					{/* <button className="btn btn-lg" onClick={() => amILogged()}>
 						Logged In?
-					</button>
+					</button> */}
 					<AppContext.Provider value={{ userAuthenticated, setUserAuthenticated }}>
 						<Routes />
 					</AppContext.Provider>
